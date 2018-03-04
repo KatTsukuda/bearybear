@@ -16,7 +16,7 @@
 /* nav bar */
 .navbar {
   width: 100%;
-  position: fixed;
+  position: static;
   z-index: 1;
   top: 130px;
   left: 15px;
@@ -40,7 +40,7 @@ ul.navbar-nav {
   display: inline-block;
   text-align: left;
 }
-.nav-link:hover, p.heart:hover {
+.nav-link:hover {
   font-weight: bold;
 }
 a.nav-link {
@@ -90,7 +90,7 @@ div.row {
   header, a.nav-link, .social a.nav-link {
     text-align: center;
   }
-  .navbar {
+    .navbar {
     width: 100%;
     position: fixed;
     z-index: 1;
@@ -110,7 +110,7 @@ div.row {
     background: #dddddd;
   }
   ul.navbar-nav {
-    position: relative;
+    position: static;
     overflow: hidden;
     margin-top: 35px;
     margin-left: -15px;
@@ -120,16 +120,13 @@ div.row {
     width: 2em;
     padding: 0 10px;
   }
-	nav ul, nav:active ul {
+  nav ul {
 		display: none;
 		position: absolute;
 		width: 100%;
 	}
 	nav li {
     font-size: 2.5em;
-	}
-	nav:hover ul {
-		display: inline;
 	}
   .nav-link:hover {
     font-weight: bold;
@@ -174,7 +171,7 @@ div.row {
   }
   p.contact a {
     font-size: 50px;
-    padding-top: 300px;
+    top: 200px;
     margin-left: -120px;
   }
 }
