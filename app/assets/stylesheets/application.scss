@@ -1,0 +1,202 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap";
+
+/* nav bar */
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 130px;
+  left: 15px;
+  overflow-x: hidden;
+  padding: 15px 0;
+  margin-top: 35px;
+}
+.navbar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  display: block;
+}
+.navbar-light .navbar-toggler {
+  border-color: rgba(0,0,0,0) !important;
+  margin-right: 15px;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+ul.navbar-nav {
+  display: inline-block;
+  text-align: left;
+}
+.nav-link:hover {
+  font-weight: bolder;
+}
+a.nav-link {
+  font-family: 'Quicksand', sans-serif;
+  color: black;
+  margin: -5px 15px;
+}
+.social a.nav-link {
+  display: inline;
+  margin: 0;
+}
+a.nav-link img {
+  width: 30px;
+}
+.profile_icon {
+  position: relative;
+  z-index: 1;
+  top: 30px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+div.about {
+  position: relative;
+}
+img.kat_pic {
+  margin-left: -135px;
+}
+p.about_me {
+  font-size: 14px;
+  margin-left: -135px;
+}
+p.tagline {
+  padding-top: 40px;
+  font-size: 10px;
+}
+img.card-img-top {
+  width: 100%;
+  border-radius: 0;
+}
+div.row {
+  width: 100%;
+}
+
+/*MEDIA QUERY*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  header, a.nav-link, .social a.nav-link {
+    text-align: center;
+  }
+  .navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: -35px;
+    left: 15px;
+    overflow-x: hidden;
+    padding: 15px 0;
+    margin-top: 35px;
+  }
+  span.navbar-toggler-icon {
+    width: 3em;
+    height: 3em;
+    margin: 0 30px 15px 0;
+  }
+  div#navbarSupportedContent {
+    padding: 20px 0;
+    background: #dddddd;
+  }
+  ul.navbar-nav {
+    position: relative;
+    overflow: hidden;
+    margin-top: 35px;
+    margin-left: -15px;
+    padding: 35px 0;
+  }
+  a.nav-link img {
+    width: 2em;
+    padding: 0 10px;
+  }
+	nav ul, nav:active ul {
+		display: none;
+		position: absolute;
+		width: 100%;
+	}
+	nav li {
+    font-size: 2.5em;
+	}
+	nav:hover ul {
+		display: inline;
+	}
+  h3 {
+    font-size: 4em;
+  }
+  p.intro, p.about {
+    font-size: 2em;
+  }
+  div.row {
+    display: block;
+    width: 100%;
+  }
+  img.card-img-top {
+    min-width: 600px;
+  }
+  .profile_icon {
+    position: relative;
+    z-index: 1;
+    top: 100px;
+    margin-bottom: 150px;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+  }
+  div.about {
+    position: relative;
+  }
+  img.kat_pic {
+    margin-left: -130px;
+    width: 80%;
+    height: 50%;
+  }
+  p.about_me {
+    font-size: 35px;
+    margin-left: -70px;
+  }
+  p.tagline {
+    margin: -75px 0 80px 0;
+    font-size: 18px;
+  }
+}
+
+/* main */
+.main {
+    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+/* drawings */
+div.card {
+  margin: 25px 10px 0 25px;
+  border: none;
+}
+
+/* body */
+body {
+  padding: 0 25px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* footer*/
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
