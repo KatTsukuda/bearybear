@@ -84,9 +84,13 @@ img.card-img-top {
 div.row {
   width: 100%;
 }
+div.row.drawings {
+  margin-top: -300px;
+}
+
 /* main */
 div.main {
-  margin-top: -250px;
+  margin-top: -150px;
 }
 
 /*MEDIA QUERY*/
@@ -133,6 +137,27 @@ div.main {
 	}
   .nav-link:hover {
     font-weight: bold;
+  }
+  div.row {
+    display: block;
+    width: 100%;
+  }
+  p.contact, p.shop {
+    margin-left: -135px;
+    margin-top: 140px;
+  }
+  img.card-img-top {
+    margin-left: -135px;
+  }
+
+  /* main */
+  div.main {
+    margin-top: 0;
+  }
+
+  /* drawing rows */
+  div.row.drawings {
+    margin-top: 0;
   }
 }
 
@@ -193,6 +218,7 @@ div.main {
   }
   img.card-img-top {
     min-width: 600px;
+    margin-left: 0;
   }
   .profile_icon {
     position: relative;
@@ -219,10 +245,10 @@ div.main {
     margin: -75px 0 80px 0;
     font-size: 18px;
   }
-  p.contact a {
+  p.contact, p.shop {
     font-size: 50px;
     top: 200px;
-    margin-left: -120px;
+    margin-left: -110px;
   }
   /* main */
   div.main {
@@ -251,8 +277,5 @@ body {
 
 /* contact */
 p.contact a {
-  position: relative;
-  z-index: 1;
-  margin-top: 100px;
   color: black;
 }
