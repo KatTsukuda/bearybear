@@ -40,8 +40,8 @@ ul.navbar-nav {
   display: inline-block;
   text-align: left;
 }
-.nav-link:hover {
-  font-weight: bolder;
+.nav-link:hover, p.heart:hover {
+  font-weight: bold;
 }
 a.nav-link {
   font-family: 'Quicksand', sans-serif;
@@ -131,6 +131,9 @@ div.row {
 	nav:hover ul {
 		display: inline;
 	}
+  .nav-link:hover {
+    font-weight: bold;
+  }
   h3 {
     font-size: 4em;
   }
@@ -169,13 +172,18 @@ div.row {
     margin: -75px 0 80px 0;
     font-size: 18px;
   }
+  p.contact a {
+    font-size: 50px;
+    padding-top: 300px;
+    margin-left: -120px;
+  }
 }
 
 /* main */
 .main {
-    margin-left: 140px; /* Same width as the sidebar + left position in px */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
 }
 
 /* drawings */
@@ -190,13 +198,10 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-/* footer*/
-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
+/* contact */
+p.contact a {
+  position: relative;
+  z-index: 1;
+  margin-top: 100px;
+  color: black;
 }

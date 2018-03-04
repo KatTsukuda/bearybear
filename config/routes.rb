@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  root to: "drawings#index"
+  get 'shop/shop'
 
-  get "/drawings", to: "drawings#index", as: "drawings"
+  get 'contact/contact'
 
+  root to: 'drawings#index'
+  get '/about' => 'about#about'
+  get '/contact' => 'contact#contact'
+  get '/drawings' => 'drawings#index'
+  get '/shop' => 'shop#shop'
 end
