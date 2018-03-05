@@ -107,7 +107,7 @@ div.main {
   .navbar {
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     top: -35px;
     left: 15px;
     overflow-x: hidden;
@@ -161,10 +161,11 @@ div.main {
   }
 
   /* contact envelope */
-  .envelope {
+  .envelope, .contact {
     margin-left: -75px;
     margin-top: 50px;
   }
+
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -174,7 +175,7 @@ div.main {
   .navbar {
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     top: -35px;
     left: 15px;
     overflow-x: hidden;
@@ -265,6 +266,10 @@ div.main {
   /* contact envelope */
   .envelope {
     margin-left: -80px;
+    margin-top: -80px;
+  }
+  .contact {
+    margin-top: -200px;
   }
 }
 
@@ -290,6 +295,15 @@ body {
 /* contact */
 a {
   color: black;
+}
+.contact {
+  top:50%;
+  left:50%;
+  position:absolute;
+  width:150px;
+  height:100px;
+  z-index:1;
+  outline:none;
 }
 .envelope{
   top:50%;
@@ -325,6 +339,15 @@ a {
   border-left:63px solid transparent;
   border-bottom:40px solid #ff8e90;
   transition:border-bottom 150ms ease-in;
+}
+.contact:after {
+  position: absolute;
+  content:"say hello!";
+  bottom: 170px;
+  width: 130px;
+  left: 15px;
+  height: 80px;
+  z-index:1;
 }
 .envelope:after{
   position:absolute;
