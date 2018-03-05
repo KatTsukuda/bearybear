@@ -84,13 +84,94 @@ img.card-img-top {
 div.row {
   width: 100%;
 }
+div.row.drawings {
+  margin-top: -300px;
+}
+
+/* main */
+div.main {
+  margin-top: -150px;
+}
 
 /*MEDIA QUERY*/
+@media only screen and (min-width : 400px) and (max-width : 1000px){
+  /* main */
+  div.main {
+    margin-top: 0;
+  }
+
+  /* navbar */
+  header, a.nav-link, .social a.nav-link {
+    text-align: center;
+  }
+  .navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: -35px;
+    left: 15px;
+    overflow-x: hidden;
+    padding: 15px 0;
+    margin-top: 35px;
+  }
+  span.navbar-toggler-icon {
+    margin: 0 15px;
+  }
+  div#navbarSupportedContent {
+    padding: 20px 0;
+    background: #dddddd;
+  }
+  ul.navbar-nav {
+    position: static;
+    overflow: hidden;
+    margin-left: -15px;
+  }
+  a.nav-link img {
+    width: 2em;
+    padding: 0 10px;
+  }
+  nav ul {
+		display: none;
+		position: absolute;
+		width: 100%;
+	}
+  .nav-link:hover {
+    font-weight: bold;
+  }
+  div.row {
+    display: block;
+    width: 100%;
+  }
+  p.shop {
+    margin-left: -135px;
+    margin-top: 140px;
+  }
+  img.card-img-top {
+    margin-left: -135px;
+  }
+
+  /* main */
+  div.main {
+    margin-top: 0;
+  }
+
+  /* drawing rows */
+  div.row.drawings {
+    margin-top: 0;
+  }
+
+  /* contact envelope */
+  .envelope {
+    margin-left: -75px;
+    margin-top: 50px;
+  }
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   header, a.nav-link, .social a.nav-link {
     text-align: center;
   }
-    .navbar {
+  .navbar {
     width: 100%;
     position: fixed;
     z-index: 1;
@@ -143,6 +224,7 @@ div.row {
   }
   img.card-img-top {
     min-width: 600px;
+    margin-left: 0;
   }
   .profile_icon {
     position: relative;
@@ -169,10 +251,20 @@ div.row {
     margin: -75px 0 80px 0;
     font-size: 18px;
   }
-  p.contact a {
+  p.shop {
     font-size: 50px;
     top: 200px;
-    margin-left: -120px;
+    margin-left: -130px;
+  }
+
+  /* main */
+  div.main {
+    margin-top: 0;
+  }
+
+  /* contact envelope */
+  .envelope {
+    margin-left: -80px;
   }
 }
 
@@ -196,9 +288,91 @@ body {
 }
 
 /* contact */
-p.contact a {
-  position: relative;
-  z-index: 1;
-  margin-top: 100px;
+a {
   color: black;
+}
+.envelope{
+  top:50%;
+  left:50%;
+  background-color: #FFF7E1;
+  background-image:linear-gradient(transparent 0%, burlywood 49%, transparent 50%);
+  position:absolute;
+  width:150px;
+  height:100px;
+  box-shadow:0 3px 20px rgba(0,0,0,0.3);
+  transition:transform 0s;
+  transition-delay:400ms;
+  z-index:1;
+  outline:none;
+}
+.flap{
+  position:absolute;
+  width:0;
+  height:0;
+  top:-50px;
+  border-top:0px solid transparent;
+  border-right:75px solid transparent;
+  border-left:75px solid transparent;
+  border-bottom:50px solid #FFF7E1;
+  transition:transform 300ms linear, border-bottom 3s;
+}
+.infoil{
+  position:absolute;
+  bottom:100px;
+  left:12px;
+  border-top:0px solid transparent;
+  border-right:63px solid transparent;
+  border-left:63px solid transparent;
+  border-bottom:40px solid #ff8e90;
+  transition:border-bottom 150ms ease-in;
+}
+.envelope:after{
+  position:absolute;
+  content:"";
+  left:10px;
+  bottom:50px;
+  width:130px;
+  height:80px;
+  background-color: #fdf5e8;
+  box-shadow:0 -0px 15px rgba(0,0,0,0.2);
+  z-index:0;
+  transition:height 300ms;
+}
+.envelope:before{
+  position:absolute;
+  content:"";
+  left:0px;
+  bottom:0px;
+  height:50px;
+  width:150px;
+  background-color: #f9f1db;
+  z-index:2;
+}
+.folds:before{
+  position:absolute;
+  content:"";
+  width:0;
+  height:0;
+  left:0;
+  border-right:0px solid transparent;
+  border-top:50px solid transparent;
+  border-bottom:50px solid transparent;
+  border-left:75px solid #FFF7E1;
+  z-index:2;
+}
+.folds:after{
+  position:absolute;
+  content:"";
+  width:0;
+  height:0;
+  right:0;
+  border-left:0px solid transparent;
+  border-top:50px solid transparent;
+  border-bottom:50px solid transparent;
+  border-right:75px solid #FFF7E1;
+  z-index:2;
+}
+.envelope:hover:after{
+  height:40px;
+  bottom:50px;
 }
