@@ -1,38 +1,8 @@
-<div class="row drawings">
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://instagram.fsnc1-1.fna.fbcdn.net/vp/a386a41a562c6d6dfa87292e707353b7/5B41DFAA/t51.2885-15/e35/26066969_1337570173055113_7132387631366668288_n.jpg" alt="Frosty Bear and Bramble Bat">
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://instagram.fsnc1-1.fna.fbcdn.net/vp/433875e3aa4ad389e755aa8fc8ff3caf/5B4B0102/t51.2885-15/e35/28151524_204059180342530_8007592092438102016_n.jpg" alt="Haru eats dango">
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://instagram.fsnc1-1.fna.fbcdn.net/vp/f64a48af652c300e5e04dffbc664b225/5B3FFE8C/t51.2885-15/e35/28151786_174405116534166_5357145831088586752_n.jpg" alt="Berry Velvet temptation">
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://instagram.fsnc1-1.fna.fbcdn.net/vp/6d813091fa8c8a5ad560681e719c16fb/5B3E5B0C/t51.2885-15/e35/27878489_208928813183169_7590517670978519040_n.jpg" alt="X-Gen Potato Bear">
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://instagram.fsnc1-1.fna.fbcdn.net/vp/77cf7c7e5f717c4aa3b1759adde73e42/5B331DE6/t51.2885-15/e35/26871412_191341654786204_1075023021334331392_n.jpg" alt="Chai Chai">
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://instagram.fsnc1-1.fna.fbcdn.net/vp/f2fc82251a3073683f36ede5cbec5c5e/5B276B51/t51.2885-15/e35/27576595_198160230767535_1033952942027177984_n.jpg" alt="Earl Grey">
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://instagram.fsnc1-1.fna.fbcdn.net/vp/0e9e4e794e373b7352046c57d9109954/5B278161/t51.2885-15/e35/26866119_213988532497365_9013320287512428544_n.jpg" alt="Haru the fluff nugget">
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://instagram.fsnc1-1.fna.fbcdn.net/vp/eae07e34f7417f61131d355d9b5c91e1/5B3085FD/t51.2885-15/e35/26864134_142111659800931_4574060812129271808_n.jpg" alt="Heartbroken Bear">
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://instagram.fsnc1-1.fna.fbcdn.net/vp/ac77fe5fa6676f457752a11aa136fd11/5B152C99/t51.2885-15/e35/26864198_2193499994211513_166363591115538432_n.jpg" alt="Huggle Bear">
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://instagram.fsnc1-1.fna.fbcdn.net/vp/b8ebc0cc7f09cb9b11e38711d5d0098b/5B463B8E/t51.2885-15/e35/26185508_137277820409052_7779547763020136448_n.jpg" alt="Los Tres Corg-migas">
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://instagram.fsnc1-1.fna.fbcdn.net/vp/dfb2a330f8bcb26ad267b3c0e0c16521/5B3DE90B/t51.2885-15/e35/26067858_215098835703565_5909148621541998592_n.jpg" alt="Lift Me High">
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://instagram.fsnc1-1.fna.fbcdn.net/vp/250c8bc265181d129696c6a9b33f0e14/5B3001C0/t51.2885-15/e35/26152085_163150637657277_5427499585830387712_n.jpg" alt="Bat goes to Paris">
-  </div>
+<div class="row">
+  <% @drawings.each do |drawing|  %>
+    <div class="card drawings" style="width: 18rem;">
+      <%= link_to image_tag(drawing.link.to_s, width: '300px', class: "card-img-top"), drawing.link %>
+      <div class="overlay text"><%= drawing.title %></div>
+    </div>
+  <% end %>
 </div>

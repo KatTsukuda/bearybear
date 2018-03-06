@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # Bonus rubygems
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+gem "omniauth-google-oauth2"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
