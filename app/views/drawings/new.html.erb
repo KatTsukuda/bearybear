@@ -1,0 +1,17 @@
+<h2>Add new drawing</h2>
+
+<%= form_for @drawing do |f| %>
+  <div>
+    <%= f.text_field :title, placeholder: "Title" %>
+  </div>
+  <div>
+    <%= f.text_field :link , placeholder: "Image Link" %>
+  </div>
+  <div>
+    <%= f.text_field :description, placeholder: "Description" %>
+  </div>
+  <div>
+    <%= f.text_field :tag, placeholder: "Tags" %>
+  </div>
+  <%= f.submit "Submit" %>
+<% end %>

@@ -81,11 +81,36 @@ img.card-img-top {
   width: 100%;
   border-radius: 0;
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .2s ease;
+  background-color: #10222B;
+}
+.drawings:hover .overlay {
+  opacity: 1;
+}
+.text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  padding: 120px 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
 div.row {
   width: 100%;
-}
-div.row.drawings {
   margin-top: -300px;
+  margin-bottom: 100px;
 }
 
 /* main */
@@ -107,7 +132,7 @@ div.main {
   .navbar {
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     top: -35px;
     left: 15px;
     overflow-x: hidden;
@@ -141,13 +166,14 @@ div.main {
   div.row {
     display: block;
     width: 100%;
+    margin-top: 0;
+  }
+  img.card-img-top, .overlay {
+    margin-left: -150px;
   }
   p.shop {
     margin-left: -135px;
     margin-top: 140px;
-  }
-  img.card-img-top {
-    margin-left: -135px;
   }
 
   /* main */
@@ -161,10 +187,11 @@ div.main {
   }
 
   /* contact envelope */
-  .envelope {
+  .envelope, .contact {
     margin-left: -75px;
     margin-top: 50px;
   }
+
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -174,7 +201,7 @@ div.main {
   .navbar {
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     top: -35px;
     left: 15px;
     overflow-x: hidden;
@@ -222,7 +249,7 @@ div.main {
     display: block;
     width: 100%;
   }
-  img.card-img-top {
+  img.card-img-top, .overlay {
     min-width: 600px;
     margin-left: 0;
   }
@@ -265,7 +292,18 @@ div.main {
   /* contact envelope */
   .envelope {
     margin-left: -80px;
+    margin-top: -80px;
   }
+  .contact {
+    margin-top: -200px;
+  }
+
+  /* footer */
+  .clearfix {
+    text-align: center;
+    margin-left: -20px;
+  }
+
 }
 
 /* main */
@@ -290,6 +328,15 @@ body {
 /* contact */
 a {
   color: black;
+}
+.contact {
+  top:50%;
+  left:50%;
+  position:absolute;
+  width:150px;
+  height:100px;
+  z-index:1;
+  outline:none;
 }
 .envelope{
   top:50%;
@@ -325,6 +372,15 @@ a {
   border-left:63px solid transparent;
   border-bottom:40px solid #ff8e90;
   transition:border-bottom 150ms ease-in;
+}
+.contact:after {
+  position: absolute;
+  content:"say hello!";
+  bottom: 170px;
+  width: 130px;
+  left: 15px;
+  height: 80px;
+  z-index:1;
 }
 .envelope:after{
   position:absolute;
@@ -375,4 +431,15 @@ a {
 .envelope:hover:after{
   height:40px;
   bottom:50px;
+}
+
+/* footer */
+.clearfix {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  clear:both;
+  padding:20px 0;
+  font-size: 15px;
+  z-index: 5;
 }
