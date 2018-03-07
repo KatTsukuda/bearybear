@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
 
   root to: 'drawings#index'
-  get '/home' => 'home#show'
+  get '/admin' => 'admin#show'
   get '/about' => 'about#about'
   get '/contact' => 'contact#contact'
   get '/drawings' => 'drawings#index'
